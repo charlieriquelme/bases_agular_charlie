@@ -1,0 +1,19 @@
+    <h3> Agregar <small>{{nuevo.nombre}}</small></h3>
+        <hr>
+
+        <!-- nos ayuda a no refrescar la página web, cada vez que realizamos un evento -->
+        <!-- para llamar una variable definica em el archivo.ts en un input o lo que sea 
+        es con el [value]= "variable.parametro" 
+            [value]="nuevo.nombre" (input)="cambiarNombre( $event )"
+        -->
+
+        <!-- comando para crear componentes en angular nuevo "ng g c dbz/personajes --skip-tests" -->
+        <form (ngSubmit)="agregar()" action="">
+            <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre">
+
+            <input type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder"/>
+
+            <button>
+                Agregar
+            </button>
+        </form>
